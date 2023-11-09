@@ -1,0 +1,11 @@
+name: PR Stats
+on:
+  workflow_dispatch: # 액션이 실행될 이벤트를 작성하세요.
+jobs:
+  pr-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Stats
+        uses: "naver/pr-stats@v0.1.0"
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
