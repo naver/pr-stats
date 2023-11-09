@@ -5,7 +5,11 @@ jobs:
   pr-stats:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: PR Stats
         uses: "naver/pr-stats@v0.1.0"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
