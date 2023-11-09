@@ -1,6 +1,6 @@
 name: PR Stats
 on:
-  workflow_dispatch: # 액션이 실행될 이벤트를 작성하세요.
+  workflow_dispatch:
 jobs:
   pr-stats:
     runs-on: ubuntu-latest
