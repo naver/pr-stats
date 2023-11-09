@@ -1,0 +1,30 @@
+name: "PR Stats"
+description: "PR 통계를 냅니다."
+inputs:
+  token:
+    description: "GitHub 토큰"
+    default: ${{ github.token }}
+  repository:
+    description: "액션이 진행될 레포지토리"
+    default: ${{ github.repository }}
+  ignoreUsers:
+    description: "통계에 포함하지 않을 유저 목록. 콤마(,)로 구분"
+    default: ""
+  configPath:
+    description: "통계에 사용할 설정 파일 경로"
+    default: "./stats.config.js"
+  period:
+    description: "통계를 낼 기간 (PR 생성 시점 기준)"
+    default: ""
+  count:
+    description: "조회할 PR 개수 (period를 입력하지 않은 경우 사용)"
+    default: 100
+  baseBranch:
+    description: "이 branch를 대상(base)으로 하는 PR만 조회 (입력하지 않으면 모든 branch 조회)"
+    default: ""
+  output:
+    description: "데이터 출력 방식. 쉼표(,)로 구분"
+    default: "console,csv"
+runs:
+  using: "node16"
+  main: "dist/index.js"
