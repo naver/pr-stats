@@ -1,4 +1,4 @@
-name: "PR Stats"
+name: "PR Statistics"
 description: "PR 통계를 냅니다."
 branding:
   icon: "bar-chart"
