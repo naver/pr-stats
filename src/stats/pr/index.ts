@@ -6,6 +6,8 @@
 
 export * from "./number";
 export * from "./title";
+export * from "./created-at";
+export * from "./merged-at";
 export * from "./added-line-count";
 export * from "./removed-line-count";
 export * from "./changed-line-count";

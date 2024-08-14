@@ -25,6 +25,8 @@ export class PRStats implements TDefaultPRStats {
 
     number: IResult<number>;
     title: IResult<string>;
+    createdAt: IResult<number>;
+    mergedAt: IResult<number>;
     addedLineCount: IResult<number>;
     removedLineCount: IResult<number>;
     changedLineCount: IResult<number>;

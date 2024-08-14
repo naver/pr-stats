@@ -20,6 +20,8 @@ type TStats<T> = {
 export interface IDefaultPRStats {
     number: number;
     title: string;
+    createdAt: number;
+    mergedAt: number;
     addedLineCount: number;
     removedLineCount: number;
     changedLineCount: number;

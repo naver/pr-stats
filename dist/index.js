@@ -14418,6 +14418,11 @@ function wrappy (fn, cb) {
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.listPRs = exports.listReviewComments = exports.listComments = exports.listReviews = exports.listEventsForTimeline = exports.getPR = void 0;
 const context_1 = __nccwpck_require__(8954);
@@ -14511,6 +14516,11 @@ exports.listPRs = listPRs;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OUTPUT_METHOD = exports.REVIEW_STATE = exports.EVENT_TYPE = exports.COMMENT_ORIGIN = void 0;
 exports.COMMENT_ORIGIN = {
@@ -14544,6 +14554,11 @@ exports.OUTPUT_METHOD = {
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -14673,6 +14688,11 @@ exports.ActionContext = ActionContext;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Activity = void 0;
 const user_1 = __nccwpck_require__(6134);
@@ -14700,6 +14720,11 @@ exports.Activity = Activity;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.comments = exports.Approval = exports.Review = exports.Comment = void 0;
 const const_1 = __nccwpck_require__(9208);
@@ -14758,6 +14783,11 @@ exports.comments = comments;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.events = exports.Commit = exports.Open = exports.Merge = exports.ReviewRequest = void 0;
 const const_1 = __nccwpck_require__(9208);
@@ -14847,6 +14877,11 @@ exports.events = events;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -14878,6 +14913,11 @@ __exportStar(__nccwpck_require__(1218), exports);
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PR = void 0;
 const user_1 = __nccwpck_require__(6134);
@@ -14958,6 +14998,11 @@ exports.PR = PR;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.reviewerInfos = exports.ReviewerInfo = void 0;
 const timeline_1 = __nccwpck_require__(1218);
@@ -15020,6 +15065,11 @@ exports.reviewerInfos = reviewerInfos;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Timeline = void 0;
 const comments_1 = __nccwpck_require__(3153);
@@ -15073,6 +15123,11 @@ exports.Timeline = Timeline;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.User = void 0;
 const context_1 = __nccwpck_require__(8954);
@@ -15123,6 +15178,11 @@ exports.User = User;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultStats = void 0;
 const stats_1 = __nccwpck_require__(9887);
@@ -15130,6 +15190,8 @@ exports.defaultStats = {
     pr: [
         ["number", stats_1.defaultPRCalculator.number],
         ["title", stats_1.defaultPRCalculator.title],
+        ["createdAt", stats_1.defaultPRCalculator.createdAt],
+        ["mergedAt", stats_1.defaultPRCalculator.mergedAt],
         ["addedLineCount", stats_1.defaultPRCalculator.addedLineCount],
         ["removedLineCount", stats_1.defaultPRCalculator.removedLineCount],
         ["changedLineCount", stats_1.defaultPRCalculator.changedLineCount],
@@ -15181,6 +15243,11 @@ exports.defaultStats = {
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -15292,6 +15359,11 @@ run();
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logAPIRequestCount = exports.log = void 0;
 const context_1 = __nccwpck_require__(8954);
@@ -15319,6 +15391,11 @@ exports.logAPIRequestCount = logAPIRequestCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -15380,6 +15457,11 @@ exports.csv = csv;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -15440,6 +15522,11 @@ __exportStar(__nccwpck_require__(3645), exports);
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -15467,6 +15554,11 @@ __exportStar(__nccwpck_require__(3505), exports);
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createPRListStats = exports.PRListStats = void 0;
 const stats_1 = __nccwpck_require__(9887);
@@ -15505,6 +15597,11 @@ exports.createPRListStats = createPRListStats;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createPRStats = exports.PRStats = void 0;
 const stats_1 = __nccwpck_require__(9887);
@@ -15521,6 +15618,8 @@ class PRStats {
     }
     number;
     title;
+    createdAt;
+    mergedAt;
     addedLineCount;
     removedLineCount;
     changedLineCount;
@@ -15550,6 +15649,11 @@ exports.createPRStats = createPRStats;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createUserStats = exports.UserStats = void 0;
 const stats_1 = __nccwpck_require__(9887);
@@ -15582,6 +15686,11 @@ exports.createUserStats = createUserStats;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.refine = exports.refineActivities = exports.refinePR = void 0;
 const context_1 = __nccwpck_require__(8954);
@@ -15612,6 +15721,11 @@ exports.refine = refine;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -15652,6 +15766,11 @@ exports.defaultUserCalculator = defaultUserCalculator;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageAddedLineCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15669,6 +15788,11 @@ exports.averageAddedLineCount = averageAddedLineCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageApprovalCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15686,6 +15810,11 @@ exports.averageApprovalCount = averageApprovalCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageChangedLineCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15703,6 +15832,11 @@ exports.averageChangedLineCount = averageChangedLineCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageCommentCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15720,6 +15854,11 @@ exports.averageCommentCount = averageCommentCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageCommitCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15737,6 +15876,11 @@ exports.averageCommitCount = averageCommitCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageConversationCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15754,6 +15898,11 @@ exports.averageConversationCount = averageConversationCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageFileCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15771,6 +15920,11 @@ exports.averageFileCount = averageFileCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageLinesChangedPerCommit = void 0;
 const averageLinesChangedPerCommit = (prStatsList) => {
@@ -15793,6 +15947,11 @@ exports.averageLinesChangedPerCommit = averageLinesChangedPerCommit;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageParticipationCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15810,6 +15969,11 @@ exports.averageParticipationCount = averageParticipationCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageRemovedLineCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15827,6 +15991,11 @@ exports.averageRemovedLineCount = averageRemovedLineCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageResponseTime = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15845,6 +16014,11 @@ exports.averageResponseTime = averageResponseTime;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageReviewerCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15862,6 +16036,11 @@ exports.averageReviewerCount = averageReviewerCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageTimeFromReviewToMerge = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15879,6 +16058,11 @@ exports.averageTimeFromReviewToMerge = averageTimeFromReviewToMerge;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageTimeToApproval = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -15897,6 +16081,11 @@ exports.averageTimeToApproval = averageTimeToApproval;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -15935,6 +16124,11 @@ __exportStar(__nccwpck_require__(2974), exports);
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.addedLineCount = void 0;
 const addedLineCount = (pr) => {
@@ -15951,6 +16145,11 @@ exports.addedLineCount = addedLineCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.approvalCount = void 0;
 const approvalCount = (pr) => {
@@ -15971,6 +16170,11 @@ exports.approvalCount = approvalCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageLinesChangedPerCommit = void 0;
 const averageLinesChangedPerCommit = (pr) => {
@@ -15988,6 +16192,11 @@ exports.averageLinesChangedPerCommit = averageLinesChangedPerCommit;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageResponseTime = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -16009,6 +16218,11 @@ exports.averageResponseTime = averageResponseTime;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageTimeToApproval = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -16030,6 +16244,11 @@ exports.averageTimeToApproval = averageTimeToApproval;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.changedLineCount = void 0;
 const changedLineCount = (pr) => {
@@ -16047,6 +16266,11 @@ exports.changedLineCount = changedLineCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.commentCount = void 0;
 const commentCount = (pr) => {
@@ -16064,6 +16288,11 @@ exports.commentCount = commentCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.commitCount = void 0;
 const commitCount = (pr) => {
@@ -16080,6 +16309,11 @@ exports.commitCount = commitCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.conversationCount = void 0;
 const conversationCount = (pr) => {
@@ -16092,11 +16326,40 @@ exports.conversationCount = conversationCount;
 
 /***/ }),
 
+/***/ 6461:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createdAt = void 0;
+const createdAt = (pr) => {
+    const value = pr.createdAt;
+    return {
+        value: +value,
+        message: `Created At: ${value}`,
+    };
+};
+exports.createdAt = createdAt;
+
+
+/***/ }),
+
 /***/ 6421:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fileCount = void 0;
 const fileCount = (pr) => {
@@ -16113,6 +16376,11 @@ exports.fileCount = fileCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -16130,6 +16398,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __exportStar(__nccwpck_require__(4157), exports);
 __exportStar(__nccwpck_require__(6785), exports);
+__exportStar(__nccwpck_require__(6461), exports);
+__exportStar(__nccwpck_require__(3286), exports);
 __exportStar(__nccwpck_require__(8157), exports);
 __exportStar(__nccwpck_require__(4931), exports);
 __exportStar(__nccwpck_require__(8057), exports);
@@ -16148,11 +16418,40 @@ __exportStar(__nccwpck_require__(4958), exports);
 
 /***/ }),
 
+/***/ 3286:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.mergedAt = void 0;
+const mergedAt = (pr) => {
+    const value = pr.mergedAt;
+    return {
+        value: +value,
+        message: `Merged At: ${value}`,
+    };
+};
+exports.mergedAt = mergedAt;
+
+
+/***/ }),
+
 /***/ 4157:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.number = void 0;
 const number = (pr) => {
@@ -16172,6 +16471,11 @@ exports.number = number;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.participationCount = void 0;
 const participationCount = (pr) => {
@@ -16189,6 +16493,11 @@ exports.participationCount = participationCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.removedLineCount = void 0;
 const removedLineCount = (pr) => {
@@ -16205,6 +16514,11 @@ exports.removedLineCount = removedLineCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.reviewerCount = void 0;
 const reviewerCount = (pr) => {
@@ -16221,6 +16535,11 @@ exports.reviewerCount = reviewerCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.timeFromReviewToMerge = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -16239,6 +16558,11 @@ exports.timeFromReviewToMerge = timeFromReviewToMerge;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.title = void 0;
 const title = (pr) => {
@@ -16258,6 +16582,11 @@ exports.title = title;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageCommentCount = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -16275,6 +16604,11 @@ exports.averageCommentCount = averageCommentCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageLinesChangedPerCommit = void 0;
 const averageLinesChangedPerCommit = (user) => {
@@ -16296,6 +16630,11 @@ exports.averageLinesChangedPerCommit = averageLinesChangedPerCommit;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageResponseTime = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -16314,6 +16653,11 @@ exports.averageResponseTime = averageResponseTime;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.averageTimeToApproval = void 0;
 const util_1 = __nccwpck_require__(9604);
@@ -16332,6 +16676,11 @@ exports.averageTimeToApproval = averageTimeToApproval;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.id = void 0;
 const id = (user) => {
@@ -16348,6 +16697,11 @@ exports.id = id;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -16380,6 +16734,11 @@ __exportStar(__nccwpck_require__(6106), exports);
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.participationCount = void 0;
 const participationCount = (user) => {
@@ -16396,6 +16755,11 @@ exports.participationCount = participationCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.participationRate = void 0;
 const participationRate = (user) => {
@@ -16414,6 +16778,11 @@ exports.participationRate = participationRate;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.requestedCount = void 0;
 const requestedCount = (user) => {
@@ -16430,6 +16799,11 @@ exports.requestedCount = requestedCount;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -16536,6 +16910,11 @@ const refineConfig = (mergedStats, defaultStats) => {
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -16563,6 +16942,11 @@ __exportStar(__nccwpck_require__(1277), exports);
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.average = void 0;
 const average = (arr) => arr.length ? arr.reduce((acc, cur) => acc + cur, 0) / arr.length : 0;
@@ -16576,6 +16960,11 @@ exports.average = average;
 
 "use strict";
 
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.printTime = void 0;
 const msToTime = (duration) => {

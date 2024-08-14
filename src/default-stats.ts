@@ -11,6 +11,8 @@ export const defaultStats: IDefaultStats = {
     pr: [
         ["number", pr.number],
         ["title", pr.title],
+        ["createdAt", pr.createdAt],
+        ["mergedAt", pr.mergedAt],
         ["addedLineCount", pr.addedLineCount],
         ["removedLineCount", pr.removedLineCount],
         ["changedLineCount", pr.changedLineCount],
