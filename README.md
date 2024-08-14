@@ -57,6 +57,8 @@ jobs:
 |------------------------------|---------------------------|
 | `number`                     | PR 번호                   |
 | `title`                      | PR 제목                   |
+| `createdAt`                  | PR 생성 시점의 timestamp    |
+| `mergedAt`                   | PR 머지 시점의 timestamp    |
 | `addedLineCount`             | 추가된 라인 수            |
 | `removedLineCount`           | 제거된 라인 수            |
 | `changedLineCount`           | 변경된 라인 수            |
