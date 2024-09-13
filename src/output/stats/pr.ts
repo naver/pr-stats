@@ -37,6 +37,7 @@ export class PRStats implements TDefaultPRStats {
     reviewerCount: IResult<number>;
     approvalCount: IResult<number>;
     participationCount: IResult<number>;
+    participationRate: IResult<number>;
     timeFromReviewToMerge: IResult<number>;
     averageResponseTime: IResult<number>;
     averageTimeToApproval: IResult<number>;

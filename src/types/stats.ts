@@ -32,6 +32,7 @@ export interface IDefaultPRStats {
     reviewerCount: number;
     approvalCount: number;
     participationCount: number;
+    participationRate: number;
     timeFromReviewToMerge: number;
     averageResponseTime: number;
     averageTimeToApproval: number;

@@ -23,6 +23,7 @@ export const defaultStats: IDefaultStats = {
         ["reviewerCount", pr.reviewerCount],
         ["approvalCount", pr.approvalCount],
         ["participationCount", pr.participationCount],
+        ["participationRate", pr.participationRate],
         ["timeFromReviewToMerge", pr.timeFromReviewToMerge],
         ["averageResponseTime", pr.averageResponseTime],
         ["averageTimeToApproval", pr.averageTimeToApproval],
