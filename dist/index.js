@@ -15202,6 +15202,7 @@ exports.defaultStats = {
         ["reviewerCount", stats_1.defaultPRCalculator.reviewerCount],
         ["approvalCount", stats_1.defaultPRCalculator.approvalCount],
         ["participationCount", stats_1.defaultPRCalculator.participationCount],
+        ["participationRate", stats_1.defaultPRCalculator.participationRate],
         ["timeFromReviewToMerge", stats_1.defaultPRCalculator.timeFromReviewToMerge],
         ["averageResponseTime", stats_1.defaultPRCalculator.averageResponseTime],
         ["averageTimeToApproval", stats_1.defaultPRCalculator.averageTimeToApproval],
@@ -15630,6 +15631,7 @@ class PRStats {
     reviewerCount;
     approvalCount;
     participationCount;
+    participationRate;
     timeFromReviewToMerge;
     averageResponseTime;
     averageTimeToApproval;
@@ -16410,6 +16412,7 @@ __exportStar(__nccwpck_require__(2134), exports);
 __exportStar(__nccwpck_require__(3652), exports);
 __exportStar(__nccwpck_require__(3558), exports);
 __exportStar(__nccwpck_require__(976), exports);
+__exportStar(__nccwpck_require__(3967), exports);
 __exportStar(__nccwpck_require__(9999), exports);
 __exportStar(__nccwpck_require__(8146), exports);
 __exportStar(__nccwpck_require__(2547), exports);
@@ -16484,6 +16487,29 @@ const participationCount = (pr) => {
     return { value, message: `Number of participations: ${value}` };
 };
 exports.participationCount = participationCount;
+
+
+/***/ }),
+
+/***/ 3967:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.participationRate = void 0;
+const participationRate = (pr) => {
+    const reviewerCount = pr.reviewerInfos.length;
+    const participationCount = pr.reviewerInfos.filter(r => r.participated).length;
+    const value = (participationCount / reviewerCount) * 100;
+    return { value, message: `Participation Rate: ${value.toFixed(2)}%` };
+};
+exports.participationRate = participationRate;
 
 
 /***/ }),

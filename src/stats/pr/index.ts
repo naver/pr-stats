@@ -18,6 +18,7 @@ export * from "./conversation-count";
 export * from "./reviewer-count";
 export * from "./approval-count";
 export * from "./participation-count";
+export * from "./participation-rate";
 export * from "./time-from-review-to-merge";
 export * from "./average-response-time";
 export * from "./average-time-to-approval";
