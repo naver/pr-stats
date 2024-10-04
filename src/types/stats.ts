@@ -60,6 +60,7 @@ export interface IDefaultPRListStats {
     averageResponseTime: number;
     averageTimeToApproval: number;
     averageLinesChangedPerCommit: number;
+    participationRate: number;
 }
 
 interface IPRListStats extends IDefaultPRListStats {

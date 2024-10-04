@@ -69,6 +69,7 @@ jobs:
 | `reviewerCount`              | 리뷰어 수                 |
 | `approvalCount`              | 승인 수                   |
 | `participationCount`         | 참여 수                   |
+| `participationRate`          | 참여율                   |
 | `timeFromReviewToMerge`      | 리뷰에서 병합까지의 시간 (ms)  |
 | `averageResponseTime`        | 평균 응답 시간 (ms)           |
 | `averageTimeToApproval`      | 평균 승인까지의 시간 (ms)     |
@@ -93,6 +94,7 @@ jobs:
 | `averageResponseTime`        | 평균 응답 시간 (ms)       |
 | `averageTimeToApproval`      | 평균 승인까지의 시간 (ms) |
 | `averageLinesChangedPerCommit` | 커밋당 평균 변경 라인 수  |
+| `participationRate`          | 참여율                  |
 
 ### User
 수집된 데이터에서 각 유저들에 대해 산출한 통계입니다. 이 데이터는 `./stats/user.csv`로 저장됩니다.
