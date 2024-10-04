@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PR Stats
-        uses: "naver/pr-stats@v0.1.0"
+        uses: "naver/pr-stats@v1.0.0"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # with 인자 설명을 반드시 참고하세요.
@@ -40,7 +40,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: PR Stats
-        uses: "naver/pr-stats@v0.1.0"
+        uses: "naver/pr-stats@v1.0.0"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Pull Request
