@@ -13,7 +13,7 @@ const MOCK_CREATED_DATE = new Date("2023-09-15T14:00:00Z");
 const MOCK_MERGED_DATE = new Date("2023-09-20T19:00:00Z");
 
 describe("participationRate", () => {
-    it("PR에서 리뷰 참여율을 구할 수 있어야 한다.", () => {
+    it("PR List에서 전체 리뷰 참여율을 구할 수 있어야 한다.", () => {
         // given
         const author = "author1";
         const [reviewer1, reviewer2, reviewer3] = ["reviewer1", "reviewer2", "reviewer3"];
@@ -62,7 +62,7 @@ describe("participationRate", () => {
         expect(result.value).to.be.equal(100);
     });
 
-    it("PR에서 리뷰 참여율을 구할 수 있어야 한다.", () => {
+    it("리뷰 참여율은 모든 PR의 참여 수의 합 대비 리뷰어 수의 합으로 계산해야 한다.", () => {
         // given
         const author = "author1";
         const [reviewer1, reviewer2, reviewer3] = ["reviewer1", "reviewer2", "reviewer3"];
