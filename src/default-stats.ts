@@ -44,6 +44,7 @@ export const defaultStats: IDefaultStats = {
         ["averageResponseTime", prList.averageResponseTime],
         ["averageTimeToApproval", prList.averageTimeToApproval],
         ["averageLinesChangedPerCommit", prList.averageLinesChangedPerCommit],
+        ["participationRate", prList.participationRate],
     ],
     user: [
         ["id", user.id],

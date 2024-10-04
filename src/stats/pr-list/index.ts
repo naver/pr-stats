@@ -18,3 +18,4 @@ export * from "./average-time-from-review-to-merge";
 export * from "./average-response-time";
 export * from "./average-time-to-approval";
 export * from "./average-lines-changed-per-commit";
+export * from "./participation-rate";

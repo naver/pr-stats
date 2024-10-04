@@ -15223,6 +15223,7 @@ exports.defaultStats = {
         ["averageResponseTime", stats_1.defaultPRListCalculator.averageResponseTime],
         ["averageTimeToApproval", stats_1.defaultPRListCalculator.averageTimeToApproval],
         ["averageLinesChangedPerCommit", stats_1.defaultPRListCalculator.averageLinesChangedPerCommit],
+        ["participationRate", stats_1.defaultPRListCalculator.participationRate],
     ],
     user: [
         ["id", stats_1.defaultUserCalculator.id],
@@ -15583,6 +15584,7 @@ class PRListStats {
     averageResponseTime;
     averageTimeToApproval;
     averageLinesChangedPerCommit;
+    participationRate;
 }
 exports.PRListStats = PRListStats;
 const createPRListStats = (prStatsList, calculator = stats_1.defaultPRListCalculator) => {
@@ -16117,6 +16119,30 @@ __exportStar(__nccwpck_require__(865), exports);
 __exportStar(__nccwpck_require__(6425), exports);
 __exportStar(__nccwpck_require__(8928), exports);
 __exportStar(__nccwpck_require__(2974), exports);
+__exportStar(__nccwpck_require__(7290), exports);
+
+
+/***/ }),
+
+/***/ 7290:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/**
+ * pr-stats
+ * Copyright (c) 2023-present NAVER Corp.
+ * Apache-2.0
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.participationRate = void 0;
+const participationRate = (prStatsList) => {
+    const totalReviewerCount = prStatsList.reduce((acc, prStats) => acc + prStats.reviewerCount.value, 0);
+    const totalParticipationCount = prStatsList.reduce((acc, prStats) => acc + prStats.participationCount.value, 0);
+    const value = (totalParticipationCount / totalReviewerCount) * 100;
+    return { value, message: `Participation Rate: ${value.toFixed(2)}%` };
+};
+exports.participationRate = participationRate;
 
 
 /***/ }),

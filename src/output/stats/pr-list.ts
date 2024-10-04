@@ -29,6 +29,7 @@ export class PRListStats implements TDefaultPRListStats {
     averageResponseTime: IResult<number>;
     averageTimeToApproval: IResult<number>;
     averageLinesChangedPerCommit: IResult<number>;
+    participationRate: IResult<number>;
 }
 
 export const createPRListStats = (
