@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PR Stats
-        uses: "naver/pr-stats@v1.0.0"
+        uses: "naver/pr-stats@v1.0.0" # 이 액션의 경로와 사용할 버전
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # with 인자 설명을 반드시 참고하세요.
