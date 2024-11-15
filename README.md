@@ -1,15 +1,15 @@
 # pr-stats
 
-## 액션 소개
-pr-stats는 PR에 대한 유용한 통계를 산출하는 GitHub Actions입니다.
+🌏 한국어 | [**English**](README.en.md)
 
-PR별 평균 머지까지 소요되는 시간, 리뷰어의 응답시간 등을 산출할 수 있습니다.
+PR에 대한 유용한 통계를 산출하는 GitHub Actions입니다.
 
-통계 결과는 [커스터마이즈](#커스터마이즈) 할 수 있습니다.
+PR별 평균 머지까지 소요되는 시간, 리뷰어의 응답시간 등을 산출할 수 있습니다. 통계 결과는 [커스터마이즈](#커스터마이즈) 할 수 있습니다.
 
-해당 액션을 업무에 활용하는 방법은 [활용 예시](#활용-예시)를 참고해 주세요.
+업무에 활용하는 방법은 [활용 예시](#활용-예시)를 참고해 주세요.
 
 ## 사용 방법
+
 GitHub 저장소에 아래 파일을 만드세요.
 
 ```yaml
@@ -51,6 +51,7 @@ jobs:
 ## 수집 데이터
 
 ### PR
+
 단일 PR에 대한 통계입니다. 이 데이터는 `./stats/pr.csv`로 저장됩니다.
 
 | 필드                         | 설명                      |
@@ -76,6 +77,7 @@ jobs:
 | `averageLinesChangedPerCommit` | 커밋당 평균 변경 라인 수  |
 
 ### PR List
+
 수집한 모든 PR에 대해서 산출한 통계입니다. 이 데이터는 `./stats/prList.csv`로 저장됩니다.
 
 | 필드                         | 설명                      |
@@ -97,26 +99,29 @@ jobs:
 | `participationRate`          | 참여율                  |
 
 ### User
+
 수집된 데이터에서 각 유저들에 대해 산출한 통계입니다. 이 데이터는 `./stats/user.csv`로 저장됩니다.
 
-| 필드                         | 설명                      |
-|------------------------------|---------------------------|
-| `id`                         | 사용자 ID                 |
-| `requestedCount`             | 요청 수                   |
-| `participationCount`         | 참여 수                   |
-| `participationRate`          | 참여율 (xx.xx)            |
-| `averageCommentCount`        | 평균 코멘트 개수          |
-| `averageResponseTime`        | 평균 응답 시간 (ms)       |
+| 필드                         | 설명             |
+|------------------------------|----------------|
+| `id`                         | 사용자 ID         |
+| `requestedCount`             | 요청 받은 수        |
+| `participationCount`         | 참여 수           |
+| `participationRate`          | 참여율 (xx.xx)    |
+| `averageCommentCount`        | 평균 코멘트 개수      |
+| `averageResponseTime`        | 평균 응답 시간 (ms)  |
 | `averageTimeToApproval`      | 평균 승인까지의 시간 (ms) |
-| `averageLinesChangedPerCommit` | 커밋당 평균 변경 라인 수|
+| `averageLinesChangedPerCommit` | 커밋당 평균 변경 라인 수 |
 
 ## 커스터마이즈
+
 액션을 실행하는 저장소 Root에 `stats.config.js` 을 추가하면, 출력할 통계 항목을 변경할 수 있습니다.
 
 > `stats.config.js` 파일은 필수로 생성하지 않아도 되며, 생성하지 않을 경우 기본동작을 실행합니다.
 
 ### 통계 항목 제어
-다음과 같이 작성하면, `pr`은 `number`, `title`, `fileCount`, `prList`는 미출력, `user`는 `id`만 출력됩니다.
+
+예를 들어 다음과 같이 작성하면 `pr`은 `number`, `title`, `fileCount` 필드를 출력하고 `prList`는 출력하지 않고 `user`는 `id`만 출력합니다.
 
 ```javascript
 // {targetRepo}/stats.config.js
@@ -128,7 +133,8 @@ module.exports = {
 ```
 
 ### 통계 항목 추가
-함수 형태로 export 하면 기본 통계 설정 정보(`defaultStats`)가 인자로 전달됩니다. 이를 통해 기본 통계 설정을 유지하며 특정 통계만 추가할 수 있습니다.
+
+기본 통계 설정 정보(`defaultStats`)가 export 함수의 인자로 전달됩니다. 이를 통해 기본 통계 설정을 유지하며 특정 통계만 추가할 수 있습니다.
 
 다음은 가장 빠른 응답 시간(ms)을 구하는 예시입니다.
 
@@ -152,20 +158,21 @@ module.exports = defaultStats => {
 
 ## with 인자 설명
 
-| 이름             | 설명                                                                           | 기본 값                                | 사용 예시                                                               |
-|----------------|------------------------------------------------------------------------------|-------------------------------------|---------------------------------------------------------------------|
-| `token`        | GitHub에서 제공하는 토큰입니다.                                                         | `${{ secrets.GITHUB_TOKEN }}`       | `token: "xoxb-798572638592-435243279588-9aCaWNnzVYelK9NzMMqa1yxz"`  |
-| `repository`   | GitHub Action이 진행될 저장소입니다. 입력하지 않을 시, `pr-stats.yml` 파일을 만든 저장소에서 통계를 추출합니다. | `${{ github.repository }}`          | `repository: "organization/repository"`                             |
-| `ignoreUsers`  | PR 통계에 포함하지 않을 사용자 목록입니다. 쉼표(,)로 여러 사용자를 등록할 수 있습니다.                         | `""` (빈 문자열)                        | `ignoreUsers: "brown"`<br>`ignoreUsers: "sonarqube[bot],lee-load"`  |
-| `configPath`   | 통계 설정 파일 경로입니다.                                                              | `"./stats.config.js"`               | `configPath: "./settings/stats.config.js"`                          |
-| `period`       | PR 통계 대상 기간을 지정합니다. 입력하지 않을 경우, `count`를 따릅니다.                               | `""` (빈 문자열)                        | `period: "2023-09-01~2023-10-01"`<br>`period: "2023-09-01~"`        |
-| `count`        | 조회할 PR의 개수를 설정합니다. 입력하지 않은 경우, `period`를 따릅니다.                               | `100`                               | `count: 50`                                                         |
-| `baseBranch`   | 작업의 기준이 되는 branch를 지정합니다. 입력하지 않으면 모든 branch에 대해 조회합니다.                      | `""` (빈 문자열)                        | `baseBranch: "main"`                                                |
-| `output` | 데이터 출력 방식을 지정합니다. 쉼표(,)로 여러 방식을 함께 사용할 수 있습니다. (유효한 형식: `console`, `csv`) | `"console,csv"` | `output: "csv"` |
+| 이름             | 설명                                                                                    | 기본 값                                | 사용 예시                                                               |
+|----------------|---------------------------------------------------------------------------------------|-------------------------------------|---------------------------------------------------------------------|
+| `token`        | GitHub에서 제공하는 토큰입니다.                                                                  | `${{ secrets.GITHUB_TOKEN }}`       | `token: "xoxb-798572638592-435243279588-9aCaWNnzVYelK9NzMMqa1yxz"`  |
+| `repository`   | GitHub Action이 진행될 저장소입니다. 입력하지 않을 시, `pr-stats.yml` 파일을 만든 저장소에서 통계를 추출합니다.          | `${{ github.repository }}`          | `repository: "organization/repository"`                             |
+| `ignoreUsers`  | PR 통계에 포함하지 않을 사용자 목록입니다. 쉼표(,)로 여러 사용자를 등록할 수 있습니다.                                  | `""` (빈 문자열)                        | `ignoreUsers: "brown"`<br>`ignoreUsers: "sonarqube[bot],lee-load"`  |
+| `configPath`   | 통계 설정 파일 경로입니다.                                                                       | `"./stats.config.js"`               | `configPath: "./settings/stats.config.js"`                          |
+| `period`       | PR 통계 대상 기간을 지정합니다. 입력하지 않을 경우, `count`를 따릅니다.                                        | `""` (빈 문자열)                        | `period: "2023-09-01~2023-10-01"`<br>`period: "2023-09-01~"`        |
+| `count`        | 조회할 PR의 개수를 설정합니다. 입력하지 않은 경우, `period`를 따릅니다.                                        | `100`                               | `count: 50`                                                         |
+| `baseBranch`   | 통계의 대상이 될 브랜치를 지정합니다. 이 브랜치가 base인 PR들에 대해 통계를 추출합니다. 입력하지 않으면 모든 PR이 대상이 됩니다. | `""` (빈 문자열)                        | `baseBranch: "main"`                                                |
+| `output` | 데이터 출력 방식을 지정합니다. 쉼표(,)로 여러 방식을 함께 사용할 수 있습니다. (유효한 형식: `console`, `csv`)             | `"console,csv"` | `output: "csv"` |
 
 > ⚠️ `period`의 우선순위가 `count`보다 높습니다. `period`가 있을 경우, `count`는 무시됩니다.
 
 ## 활용 예시
+
 이 액션을 활용하면 팀의 코드 리뷰 현황을 명확하게 파악하고 개선점을 찾아낼 수 있습니다.
 
 ### 1. 상관관계 테이블을 통한 분석
@@ -189,8 +196,6 @@ module.exports = defaultStats => {
 만약 개선 활동 이후 아래와 같은 차트로 변화했다면, 이는 개선 활동이 상당히 성공적이었음을 보여줍니다.
 
 <img width="700" alt="after" src="https://github.com/user-attachments/assets/30ac9605-aa41-4cfa-a46b-ac32396172a2">
-
-
 
 ## 배포 라이선스
 
