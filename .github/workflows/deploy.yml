@@ -1,0 +1,33 @@
+name: Next.js Build and Publish for GitHub Pages
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20
+      uses: actions/setup-node@v3
+      with:
+        node-version: "20"
+
+    - name: npm Install
+      working-directory: ./site
+      run: npm install
+
+    - name: Build Next.js
+      working-directory: ./site
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site/out/
+        publish_branch: github-gh-pages
