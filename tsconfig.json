@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",    
+    "outDir": "./dist",
+    "allowJs": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  },
+  "ts-node": {
+    "files": true
+  },
+}
